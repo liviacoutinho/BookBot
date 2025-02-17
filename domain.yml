@@ -1,0 +1,77 @@
+version: '3.1'
+intents:
+- avaliar
+- confirmar_resenha
+- informar_livro
+- informar_nota
+- informar_resenha
+- negar_resenha
+- responder_resenha
+
+entities:
+- nota
+- resenha
+
+slots:
+  livro:
+    type: text
+    mappings:
+    - type: from_text
+
+  nota:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: nota
+  resenha:
+    type: text
+    mappings:
+    - type: from_text
+    
+responses:
+  utter_avaliar:
+  - text: Claro! Qual livro você gostaria de avaliar?
+  - text: Qual livro você gostaria de avaliar?
+  - text: Qual livro você deseja avaliar?
+  - text: Qual livro você quer avaliar?
+  - text: Qual livro você quer dar uma nota?
+  - text: Qual livro você quer registrar sua avaliação?
+  - text: Qual livro você quer adicionar uma avaliação?
+  - text: Qual livro você quer dar uma nota?
+  - text: Qual livro você quer registrar sua opinião?
+  - text: Qual livro você quer avaliar agora?
+
+  utter_nota_livro:
+  - text: Qual a sua nota para esse livro?
+  - text: Que nota você daria para esse livro?
+  - text: Como você avaliaria esse livro?
+  - text: Qual é a sua avaliação para esse livro?
+  - text: Que nota você quer dar para esse livro?
+  - text: Qual é a sua nota para o livro?
+  - text: Como você classificaria esse livro?
+  - text: Qual pontuação você daria para esse livro?
+  - text: Qual é a sua opinião sobre esse livro em termos de nota?
+  - text: Que nota você atribui a esse livro?
+
+  utter_deseja_resenha:
+  - text: Deseja adicionar uma resenha ao livro {livro}?
+
+  utter_pedir_resenha:
+  - text: Por favor, adicione sua resenha
+
+  utter_confirmacao:
+  - text: Obrigado pela sua avaliação! Você avaliou o livro {livro} com {nota} estrelas.
+
+  utter_confirmacao_com_resenha:
+  - text: Obrigado pela sua avaliação! Você avaliou o livro {livro} com {nota} estrelas. Sua resenha foi salva!
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+- utter_deseja_resenha
+- utter_avaliar
+- utter_pedir_resenha
+- utter_nota_livro
+- utter_confirmacao_com_resenha

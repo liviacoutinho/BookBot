@@ -1,0 +1,58 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "avaliar": 0,
+        "back": 1,
+        "confirmar_resenha": 2,
+        "informar_livro": 3,
+        "informar_nota": 4,
+        "informar_resenha": 5,
+        "negar_resenha": 6,
+        "nlu_fallback": 7,
+        "out_of_scope": 8,
+        "responder_resenha": 9,
+        "restart": 10,
+        "session_start": 11
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "utter_avaliar": 13,
+        "utter_confirmacao": 14,
+        "utter_confirmacao_com_resenha": 15,
+        "utter_deseja_resenha": 16,
+        "utter_nota_livro": 17,
+        "utter_pedir_resenha": 18
+      },
+      "entities": {
+        "livro": 0,
+        "nota": 1,
+        "resenha": 2
+      },
+      "slots": {
+        "livro_0": 0,
+        "nota_0": 1,
+        "nota_1": 2,
+        "resenha_0": 3
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

@@ -1,0 +1,4 @@
+- rule: Pedir resenha após confirmação
+  steps:
+    - intent: confirmar_resenha
+    - action: utter_pedir_resenha

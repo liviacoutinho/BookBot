@@ -1,0 +1,79 @@
+version: "3.1"
+nlu:
+- intent: avaliar
+  examples: |
+    - Quero avaliar um livro
+    - Gostaria de dar uma nota para um livro
+    - Quero registrar minha avaliação de um livro
+    - Posso avaliar um livro?
+    - Vou avaliar um livro agora
+    - Adicionar uma avaliação para um livro
+    - Quero dar uma nota para um livro que li
+    - Registrar minha opinião sobre um livro
+    - Avaliar um livro que acabei de ler
+    - Posso adicionar uma resenha de um livro?
+    - Quero dar minha nota para um livro
+    - Quero dar uma nota para um livro
+    - quero avaliar um livro
+
+- intent: informar_livro
+  examples: |
+    - O Senhor dos Anéis  
+    - Harry Potter e as Relíquias da Morte  
+    - 1984  
+    - A Revolução dos Bichos  
+    - Dom Quixote  
+    - O Hobbit  
+    - O Pequeno Príncipe  
+    - Moby Dick  
+    - Guerra e Paz  
+    - A Metamorfose  
+    - Cem Anos de Solidão  
+    - O Alquimista  
+    - Harry Potter  
+
+- intent: informar_nota
+  examples: |
+    - Eu dou [4.5](nota) estrelas
+    - Minha nota é [3](nota)
+    - Eu avalio com [5](nota) estrelas
+    - Dou [2.5](nota) estrelas
+    - Minha avaliação é [4](nota)
+    - Eu dou [3.5](nota) estrelas
+    - Minha nota para esse livro é [4](nota)
+    - Eu dou [5](nota) estrelas para esse livro
+    - Avalio com [2](nota) estrelas
+    - Dou [1.5](nota) estrelas
+    - [5](nota) estrelas
+
+- intent: confirmar_resenha
+  examples: |
+    - sim
+    - claro
+    - com certeza
+    - quero sim
+    - sim, quero fazer a resenha
+    - sim, quero escrever minha opinião
+    - quero adicionar uma resenha
+    - sim, por favor
+    - Sim
+
+- intent: negar_resenha
+  examples: |
+    - Não
+    - Prefiro não escrever uma resenha
+    - Não quero
+    - Deixa pra próxima
+
+- intent: informar_resenha
+  examples: |
+    - O livro é incrível, adorei a história e os personagens.
+    - Achei a narrativa um pouco lenta no começo, mas depois melhorou.
+    - A escrita do autor é maravilhosa, recomendo a leitura.
+    - Não gostei muito do final, esperava algo diferente.
+    - A trama é envolvente e os personagens são bem desenvolvidos.
+    - O livro é bom, mas achei algumas partes confusas.
+    - Gostei muito do livro, especialmente dos diálogos.
+    - A história é emocionante e cheia de reviravoltas.
+    - Achei o livro mediano, não me prendeu tanto quanto esperava.
+    - A leitura foi agradável, mas não é um dos meus favoritos.

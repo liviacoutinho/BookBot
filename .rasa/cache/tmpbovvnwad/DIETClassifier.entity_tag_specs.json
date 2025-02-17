@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-livro",
+      "2": "I-livro",
+      "3": "L-livro",
+      "4": "U-livro",
+      "5": "B-nota",
+      "6": "I-nota",
+      "7": "L-nota",
+      "8": "U-nota",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-livro": 1,
+      "I-livro": 2,
+      "L-livro": 3,
+      "U-livro": 4,
+      "B-nota": 5,
+      "I-nota": 6,
+      "L-nota": 7,
+      "U-nota": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
