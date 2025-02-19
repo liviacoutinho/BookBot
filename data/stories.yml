@@ -1,62 +1,13 @@
 version: "3.1"
 
 stories:
-
-- story: interactive_story_1
-  steps:
-  - intent: avaliar
-  - slot_was_set:
-    - resenha: quero avaliar um livro
-  - action: utter_avaliar
-  - intent: informar_livro
-    entities:
-    - livro: Harry Potter
-  - slot_was_set:
-    - livro: Harry Potter
-  - slot_was_set:
-    - resenha: Harry Potter
-  - action: utter_nota_livro
-  - intent: informar_nota
-    entities:
-    - nota: '5'
-  - slot_was_set:
-    - nota: '5'
-  - slot_was_set:
-    - resenha: 5 estrelas
-  - action: utter_deseja_resenha
-  - intent: confirmar_resenha
-  - slot_was_set:
-    - resenha: Sim
-  - action: utter_pedir_resenha
-  - intent: informar_resenha
-  - slot_was_set:
-    - resenha: A trama é envolvente e os personagens são bem desenvolvidos.
-  - action: utter_confirmacao_com_resenha
-
-
-- story: interactive_story_2
-  steps:
-  - intent: avaliar
-  - slot_was_set:
-    - resenha: quero avaliar um livro
-  - action: utter_avaliar
-  - intent: informar_livro
-    entities:
-    - livro: Harry Potter
-  - slot_was_set:
-    - livro: Harry Potter
-  - slot_was_set:
-    - resenha: Harry Potter
-  - action: utter_nota_livro
-  - intent: informar_nota
-    entities:
-    - nota: '5'
-  - slot_was_set:
-    - nota: '5'
-  - slot_was_set:
-    - resenha: 5 estrelas
-  - action: utter_deseja_resenha
-  - intent: negar_resenha
-  - slot_was_set:
-    - resenha: Nao
-  - action: utter_confirmacao
+  - story: Avaliar um livro
+    steps:
+      - intent: avaliar
+      - action: utter_titulo_livro
+      - intent: informar_livro
+        entities:
+          - livro
+      - slot_was_set: 
+          - livro: "O senhor dos aneis"
+      - action: utter_confirmacao

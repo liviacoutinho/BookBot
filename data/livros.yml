@@ -1,0 +1,14 @@
+version: "3.1"
+nlu:
+- lookup: livro
+  examples: |
+    - O Senhor dos Anéis
+    - Harry Potter
+    - 1984
+    - O Pequeno Príncipe
+    - Dom Quixote
+    - Moby Dick
+    - Guerra e Paz
+    - O Hobbit
+    - A Revolução dos Bichos
+    - Teste de livro
