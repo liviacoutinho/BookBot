@@ -25,3 +25,25 @@ nlu:
     - Quero dar minha opinião sobre [Moby Dick](livro)
     - Estou falando sobre [Guerra e Paz](livro)
     - [O Hobbit](livro)
+
+- intent: informar_nota
+  examples: |
+    - Eu dou [5](nota) estrelas
+    - Eu dou [4](nota) estrelas
+    - Minha nota é [3](nota)
+    - Dou [2](nota) estrelas para o livro
+    - Avalio com [1](nota) estrela
+    - Minha avaliação é [5](nota)
+    - Dou [3](nota) estrelas
+    - Minha nota para o livro é [4](nota)
+    - Avalio o livro com [2](nota) estrelas
+    - Dou [1](nota) estrela
+    - Minha avaliação é [4](nota) estrelas
+
+- intent: informar_resenha
+  examples: |
+    - Gostei muito desse livro, a história é envolvente e cheia de reviravoltas.
+    - Achei o livro um pouco cansativo, mas os personagens são bem construídos.
+    - Uma leitura incrível! Recomendo para todos que gostam de fantasia.
+    - A narrativa é um pouco lenta no começo, mas melhora bastante depois da metade.
+    - Não gostei tanto, achei o final previsível.

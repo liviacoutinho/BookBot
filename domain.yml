@@ -4,9 +4,13 @@ intents:
   - avaliar
   - confirmar_resenha
   - informar_livro
+  - informar_nota
+  - informar_resenha
 
 entities:
   - livro
+  - nota
+  - resenha
 
 slots:
   livro:
@@ -15,21 +19,49 @@ slots:
     mappings:
       - type: from_entity
         entity: livro
+  
+  nota:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: nota
+
+  resenha:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: resenha
+
+templates:
+  utter_deseja_resenha:
+  - text: "Deseja adicionar uma resenha para o livro {livro}?"
+  buttons:
+  - title: "Sim"
+    payload: "/informar_resenha"
+  - title: "Não"
+    payload: "/utter_confirmacao"
+
 
 responses:
   utter_titulo_livro:
   - text: Claro! Qual livro você gostaria de avaliar?
   - text: Qual livro você gostaria de avaliar?
   - text: Qual livro você deseja avaliar?
-  - text: Qual livro você quer avaliar?
-  - text: Qual livro você quer dar uma nota?
-  - text: Qual livro você quer registrar sua avaliação?
-  - text: Qual livro você quer adicionar uma avaliação?
-  - text: Qual livro você quer registrar sua opinião?
-  - text: Qual livro você quer avaliar agora?
+
+  utter_pedir_nota:
+  - text: Qual nota você daria para o livro "{livro}"?
+
+  utter_pedir_resenha:
+  - text: Por favor, me conte o que achou do livro "{livro}".
 
   utter_confirmacao:
-    - text: Obrigado pela sua avaliação! Você avaliou o livro "{livro}".
+  - text: Obrigado pela sua avaliação! Você avaliou o livro "{livro}" com {nota} estrelas.
+
+  utter_confirmacao_resenha:
+  - text: Obrigado pela sua avaliação! Você avaliou o livro "{livro}" com {nota} estrelas e a seguinte resenha> "{resenha}".
+
 
 session_config:
   session_expiration_time: 60
@@ -37,4 +69,8 @@ session_config:
 
 actions:
   - utter_titulo_livro
+  - utter_pedir_nota
+  - utter_pedir_resenha
+  - utter_deseja_resenha
+  - utter_confirmacao_resenha
   - utter_confirmacao

@@ -10,4 +10,17 @@ stories:
           - livro
       - slot_was_set: 
           - livro: "O senhor dos aneis"
+      - action: utter_pedir_nota
+      - intent: informar_nota
+        entities:
+          - nota
+      - slot_was_set:
+          - nota: 5
+      - action: utter_deseja_resenha
+      - intent: informar_resenha
+        entities:
+          - resenha
+      - slot_was_set:
+          - resenha: "Gostei muito desse livro, a história é envolvente e cheia de reviravoltas."
       - action: utter_confirmacao
+        
