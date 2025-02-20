@@ -1,7 +1,7 @@
 version: "3.1"
 
 stories:
-  - story: interactive_story_1
+  - story: avaliar o livro com resenha
     steps:
     - intent: avaliar
     - action: utter_titulo_livro
@@ -23,3 +23,26 @@ stories:
     - slot_was_set:
       - resenha: A narrativa foi um pouco confusa para mim, mas o final compensou.
     - action: utter_confirmacao_resenha
+  
+
+  - story: avaliar o livro sem resenha
+    steps:
+    - intent: avaliar
+    - action: utter_titulo_livro
+    - intent: informar_livro
+      entities:
+      - livro
+    - slot_was_set:
+      - livro: Harry Potter
+    - action: utter_pedir_nota
+    - intent: informar_nota
+      entities:
+      - nota
+    - slot_was_set:
+      - nota: '4.5'
+    - action: utter_deseja_resenha
+    - intent: negar_resenha
+    - action: utter_confirmacao
+  
+
+
