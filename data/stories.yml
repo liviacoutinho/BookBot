@@ -1,26 +1,25 @@
 version: "3.1"
 
 stories:
-  - story: Avaliar um livro
+  - story: interactive_story_1
     steps:
-      - intent: avaliar
-      - action: utter_titulo_livro
-      - intent: informar_livro
-        entities:
-          - livro
-      - slot_was_set: 
-          - livro: "O senhor dos aneis"
-      - action: utter_pedir_nota
-      - intent: informar_nota
-        entities:
-          - nota
-      - slot_was_set:
-          - nota: 5
-      - action: utter_deseja_resenha
-      - intent: informar_resenha
-        entities:
-          - resenha
-      - slot_was_set:
-          - resenha: "Gostei muito desse livro, a história é envolvente e cheia de reviravoltas."
-      - action: utter_confirmacao
-        
+    - intent: avaliar
+    - action: utter_titulo_livro
+    - intent: informar_livro
+      entities:
+      - livro
+    - slot_was_set:
+      - livro: Harry Potter
+    - action: utter_pedir_nota
+    - intent: informar_nota
+      entities:
+      - nota
+    - slot_was_set:
+      - nota: '4.5'
+    - action: utter_deseja_resenha
+    - intent: confirmar_resenha
+    - action: utter_pedir_resenha
+    - intent: informar_resenha
+    - slot_was_set:
+      - resenha: A narrativa foi um pouco confusa para mim, mas o final compensou.
+    - action: utter_confirmacao_resenha

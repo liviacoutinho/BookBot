@@ -14,7 +14,7 @@ nlu:
     - Posso adicionar uma resenha de um livro?
     - Quero dar minha nota para um livro
     - Quero dar uma nota para um livro
-  
+    - quero avaliar um livro
 - intent: informar_livro
   examples: |
     - O livro é [O Senhor dos Anéis](livro)
@@ -25,7 +25,7 @@ nlu:
     - Quero dar minha opinião sobre [Moby Dick](livro)
     - Estou falando sobre [Guerra e Paz](livro)
     - [O Hobbit](livro)
-
+    - [Harry Potter][{"entity": "livro"}, {"entity": "livro"}]
 - intent: informar_nota
   examples: |
     - Eu dou [5](nota) estrelas
@@ -39,11 +39,20 @@ nlu:
     - Avalio o livro com [2](nota) estrelas
     - Dou [1](nota) estrela
     - Minha avaliação é [4](nota) estrelas
-
+    - [4.5](nota) estrelas
+- intent: confirmar_resenha
+  examples: |
+    - Sim
+- intent: negar_resenha
+  examples: |
+    - Não
 - intent: informar_resenha
   examples: |
     - Gostei muito desse livro, a história é envolvente e cheia de reviravoltas.
-    - Achei o livro um pouco cansativo, mas os personagens são bem construídos.
+    - Esse livro mudou minha vida! A escrita é cativante e a trama surpreendente.
+    - Achei meio cansativo, os personagens não me prenderam tanto.
     - Uma leitura incrível! Recomendo para todos que gostam de fantasia.
-    - A narrativa é um pouco lenta no começo, mas melhora bastante depois da metade.
-    - Não gostei tanto, achei o final previsível.
+    - A narrativa foi um pouco confusa para mim, mas o final compensou.
+    - Não gostei muito, esperava algo diferente.
+    - Um dos melhores livros que já li! A escrita do autor é fantástica.
+    - Esse livro é emocionante, cheio de reflexões sobre a vida.
