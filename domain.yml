@@ -6,6 +6,8 @@ intents:
 - informar_nota
 - informar_resenha
 - negar_resenha
+- visualizar_avaliacoes
+- dizer_ola_mundo
 entities:
 - nota
 - livro
@@ -49,6 +51,8 @@ responses:
   - text: Obrigado pela sua avaliação! Você avaliou o livro "{livro}" com {nota} estrelas.
   utter_confirmacao_resenha:
   - text: Obrigado pela sua avaliação! Você avaliou o livro "{livro}" com {nota} estrelas e a seguinte resenha> "{resenha}".
+  utter_avaliacoes:
+  - text: "Aqui estão as suas avaliações: Livro:{livro} Nota:{nota} Resenha:{resenha}"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -59,3 +63,4 @@ actions:
 - utter_pedir_nota
 - utter_confirmacao_resenha
 - utter_confirmacao
+- action_hello_world

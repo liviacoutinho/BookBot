@@ -56,3 +56,15 @@ nlu:
     - Não gostei muito, esperava algo diferente.
     - Um dos melhores livros que já li! A escrita do autor é fantástica.
     - Esse livro é emocionante, cheio de reflexões sobre a vida.
+- intent: visualizar_avaliacoes
+  examples: |
+    - Quero ver as avaliações do meus livros 
+    - Quero ver as notas que dei para os livros
+    - Quero ver as resenhas que escrevi
+    - Quero ver as avaliações que fiz
+    - Quero ver as notas que dei
+- intent: dizer_ola_mundo
+  examples: |
+    - Olá, mundo!
+    - oi mundo
+    - olá mundo

@@ -43,6 +43,16 @@ stories:
     - action: utter_deseja_resenha
     - intent: negar_resenha
     - action: utter_confirmacao
+
+  - story: visualizar avaliações
+    steps:
+    - intent: visualizar_avaliacoes
+    - action: utter_avaliacoes
   
+
+  - story: hello world
+    steps:
+    - intent: dizer_ola_mundo
+    - action: action_hello_world
 
 
