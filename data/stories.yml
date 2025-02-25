@@ -10,6 +10,11 @@ stories:
       - livro
     - slot_was_set:
       - livro: Harry Potter
+    - action: action_procura_livros
+    # Você quis dizer "Harry Potter e a câmara secreta"?
+    # Se Sim, 
+    # Fluxo Segue normal 
+    # Se não, o bot gera as opções de acordo com os titulos que ele colheu
     - action: utter_pedir_nota
     - intent: informar_nota
       entities:
@@ -34,6 +39,7 @@ stories:
       - livro
     - slot_was_set:
       - livro: Harry Potter
+    - action: action_procura_livros
     - action: utter_pedir_nota
     - intent: informar_nota
       entities:
@@ -44,12 +50,12 @@ stories:
     - intent: negar_resenha
     - action: utter_confirmacao
 
+
   - story: visualizar avaliações
     steps:
     - intent: visualizar_avaliacoes
     - action: utter_avaliacoes
   
-
   - story: hello world
     steps:
     - intent: dizer_ola_mundo
