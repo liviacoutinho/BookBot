@@ -40,10 +40,10 @@ nlu:
     - Dou [1](nota) estrela
     - Minha avaliação é [4](nota) estrelas
     - [4.5](nota) estrelas
-- intent: confirmar_resenha
+- intent: confirmar
   examples: |
     - Sim
-- intent: negar_resenha
+- intent: negar
   examples: |
     - Não
 - intent: informar_resenha

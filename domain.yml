@@ -1,11 +1,11 @@
 version: '3.1'
 intents:
 - avaliar
-- confirmar_resenha
+- confirmar
 - informar_livro
 - informar_nota
 - informar_resenha
-- negar_resenha
+- negar
 - visualizar_avaliacoes
 - dizer_ola_mundo
 entities:
@@ -36,6 +36,8 @@ responses:
   - text: Claro! Qual livro você gostaria de avaliar?
   - text: Qual livro você gostaria de avaliar?
   - text: Qual livro você deseja avaliar?
+  utter_selecione_livro:
+  - text: Selecione um dos livros abaixo
   utter_pedir_nota:
   - text: Qual nota você daria para o livro "{livro}"?
   utter_deseja_resenha:
@@ -58,6 +60,7 @@ session_config:
   carry_over_slots_to_new_session: true
 actions:
 - utter_titulo_livro
+- utter_selecione_livro
 - utter_deseja_resenha
 - utter_pedir_resenha
 - utter_pedir_nota
